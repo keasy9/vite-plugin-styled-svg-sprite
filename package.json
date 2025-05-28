@@ -1,0 +1,39 @@
+{
+    "name": "vite-plugin-styled-svg-sprite",
+    "version": "0.0.1",
+    "description": "Generate svg sprite and with useful stylesheets",
+    "main": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "scripts": {
+        "dev": "vitest",
+        "build": "tsup src/index.ts --format esm --dts",
+        "test": "vitest run"
+    },
+    "keywords": [
+        "vite",
+        "vite-plugin",
+        "svg-sprite",
+        "svg"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/keasy9/vite-plugin-styled-svg-sprite.git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "glob": "^11.0.0"
+    },
+    "peerDependencies": {
+        "vite": "^6.0.0"
+    },
+    "devDependencies": {
+        "@types/glob": "^8.1.0",
+        "@types/node": "^22.10.1",
+        "@types/svg-sprite": "^0.0.39",
+        "svg-sprite": "^2.0.4",
+        "tsup": "^8.3.5",
+        "typescript": "^5.6.2",
+        "vite": "^6.0.3",
+        "vitest": "^2.1.8"
+    }
+}

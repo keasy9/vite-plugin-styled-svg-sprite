@@ -1,0 +1,15 @@
+//noinspection CssUnknownTarget
+{{#sprite}}:root {
+    --ss: url('{{{spriteUrl}}}'); // sprite svg
+}{{/sprite}}
+
+{{#shapes}}
+@{{name}}: var(--ss) {{position.absolute.xy}} {{width.outer}}px {{height.outer}}px;
+{{/shapes}}
+
+.{{mixinName}}(@icon) {
+    width: extract(@icon, 4);
+    height: extract(@icon, 5);
+    @spriteImage: extract(@icon, 1);
+    background: @spriteImage extract(@icon, 2) extract(@icon, 3) no-repeat;
+}
