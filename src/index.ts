@@ -9,7 +9,7 @@ export interface pluginOptions {
     publicSvg: string,
 }
 
-export default function svgSpritePlugin(options: pluginOptions) {
+export default function svgSprite(options: pluginOptions) {
     const {
         inputDir,
         outputSvg,
@@ -32,6 +32,7 @@ export default function svgSpritePlugin(options: pluginOptions) {
                 throw new Error(`Входная директория ${resolvedInputDir} не существует`);
             }
 
+            // todo многовато проблем от svg-sprite, мб отказаться от него...
             const spriter = new SVGSpriter({
                 mode: {
                     css: {
